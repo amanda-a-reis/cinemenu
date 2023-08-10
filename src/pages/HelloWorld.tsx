@@ -1,3 +1,6 @@
+import { getStarWarsPeople } from "@/api/fakeRequest";
+
+import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -10,9 +13,13 @@ const Container = styled.div`
 `;
 
 function HelloWorld() {
+  const { data, isLoading } = useQuery({
+    queryKey: ["starWars"],
+    queryFn: getStarWarsPeople,
+  });
   return (
     <Container>
-      <div>Hello world!</div>
+      {!isLoading && <div>Hello world!: {data?.data.name}</div>}
     </Container>
   );
 }
