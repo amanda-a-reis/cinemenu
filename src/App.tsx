@@ -1,16 +1,19 @@
 import { Provider } from "react-redux";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ThemeProvider } from "styled-components";
 
 import { store } from "@/redux/config/store.ts";
+import { queryClient } from "@/async-state/reactQuery";
+import { theme } from "@/themes";
 import Routes from "@/routes/Routes";
-
-const queryClient = new QueryClient();
 
 function App() {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-        <Routes />
+        <ThemeProvider theme={theme}>
+          <Routes />
+        </ThemeProvider>
       </QueryClientProvider>
     </Provider>
   );

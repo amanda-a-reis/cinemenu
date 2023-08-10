@@ -1,7 +1,7 @@
-import { getStarWarsPeople } from "@/api/fakeRequest";
-
 import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
+
+import { getStarWarsPeople } from "@/api/fakeRequest";
 
 const Container = styled.div`
   height: 100vh;
@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: bisque;
+  background-color: ${(props) => props.theme.pink};
 `;
 
 function HelloWorld() {
