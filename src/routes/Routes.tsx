@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Home from "@/pages/Home";
+import MyComponent from "@/pages/Home";
 import HelloWorld from "@/pages/HelloWorld";
 import { Counter } from "@/pages/Counter";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <MyComponent />,
   },
   {
     path: "/hello",
