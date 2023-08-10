@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import HelloWorld from "@/pages/HelloWorld";
 import Home from "@/pages/Home";
+import HelloWorld from "@/pages/HelloWorld";
+import { Counter } from "@/pages/Counter";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
   {
     path: "/hello",
     element: <HelloWorld />,
+  },
+  {
+    path: "/counter",
+    element: <Counter />,
   },
 ]);
 
