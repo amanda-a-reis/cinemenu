@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# environment
+.env.development
+.env                
+.env.local          
+.env.[mode]         
+.env.[mode].local

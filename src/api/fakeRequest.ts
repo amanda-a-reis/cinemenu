@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const getStarWarsPeople = async () => {
-  const URL = "https://swapi.dev/api/people/1"
+  const URL = import.meta.env.VITE_SWAPI_URL || ""
   return axios.get(URL);
 };
